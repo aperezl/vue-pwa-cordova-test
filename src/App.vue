@@ -81,7 +81,12 @@
 </template>
 
 <script>
+  import FastClick from 'fastclick'
   export default {
+    mounted () {
+      console.log('fastclick', FastClick)
+      FastClick.attach(document.body)
+    },
     data () {
       return {
         clipped: false,
